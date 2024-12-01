@@ -1,11 +1,235 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Payoo Mobile Banking</title>
+    <!-- cdn -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.14/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
 </head>
+
 <body>
-    <div class="text-6xl">Welcome to Payoo</div>
+    <div class="flex justify-center items-center">
+        <div class="w-[400px] h-[780px] border-8 border-black rounded-2xl">
+            <!-- balance start -->
+            <div class="flex justify-between w-11/12 mx-auto my-4">
+                <div>
+                    <p id="account-balance" class="text-2xl font-bold">4500</p>
+                    <p>Available Balance</p>
+                </div>
+
+                <div>
+                    <button id="log-out-btn" class="btn">Log Out</button>
+                </div>
+            </div>
+            <!-- balance end -->
+            <div class="divider"></div>
+            <!-- payoo content start -->
+            <div class="w-11/12 mx-auto space-y-2">
+                <h1 class="text-3xl font-bold">🔥 Welcome to Payooo!</h1>
+                <p>Enjoy easy and convenient financial services with us. Cashout charge is low and </p>
+            </div>
+            <!-- payoo content end -->
+
+            <!-- features start -->
+            <div class="w-11/12 mx-auto grid grid-cols-3 gap-3 my-5">
+
+                <button id="add-money"><div class="border-2 border-gray-200 p-3 rounded-lg shadow-md flex flex-col justify-center items-center space-y-2">
+                    <svg width="23.500000" height="23.500000" viewBox="0 0 23.5 23.5" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                        <desc>
+                                Created with Pixso.
+                        </desc>
+                        <defs/>
+                        <path id="Vector" d="M18.7 0.89C18.85 0.85 19 0.89 19.1 0.94C19.35 1.1 19.5 1.35 19.54 1.69L20.04 4.39L20.9 4.39L20.4 1.55C20.29 0.94 20 0.5 19.54 0.19C19.2 0 18.79 -0.06 18.45 0.05L4.54 4.35L7.14 4.39L18.7 0.89Z" fill="#F04B36" fill-opacity="1.000000" fill-rule="nonzero"/>
+                        <path id="Vector" d="M22.2 4.4L20.95 4.4L20.1 4.4L7.2 4.4L4.55 4.35C4.2 4.45 3.85 4.7 3.65 5.1C3.5 5.35 3.45 5.6 3.45 5.9L3.45 12.8C4 12.65 4.6 12.55 5.2 12.55C8.65 12.55 11.45 15.25 11.45 18.54C11.45 19.1 11.4 19.6 11.25 20.1L22.2 20.1C22.9 20.1 23.5 19.45 23.5 18.65L23.5 15.4L17.4 15.4C17.15 15.4 17 15.2 17 15L17 9.65C17 9.4 17.2 9.25 17.4 9.25L23.5 9.25L23.5 5.9C23.5 5.1 22.9 4.4 22.2 4.4Z" fill="#F7A93B" fill-opacity="1.000000" fill-rule="nonzero"/>
+                        <path id="Vector" d="M17.79 14.55L23.5 14.55L23.5 10.05L17.79 10.05L17.79 14.55ZM20.4 11.45C20.8 11.45 21.15 11.85 21.15 12.3C21.15 12.8 20.8 13.15 20.4 13.15C20 13.15 19.65 12.75 19.65 12.3C19.65 11.85 20 11.45 20.4 11.45Z" fill="#E77528" fill-opacity="1.000000" fill-rule="nonzero"/>
+                        <path id="Vector" d="M5.25 13.5C2.35 13.5 0 15.75 0 18.5C0 21.25 2.35 23.5 5.25 23.5C7.39 23.5 9.39 22.2 10.14 20.25C10.35 19.7 10.5 19.1 10.5 18.5C10.5 15.75 8.14 13.5 5.25 13.5ZM7.25 19L5.75 19L5.75 20.5C5.75 20.75 5.54 21 5.25 21C5 21 4.75 20.8 4.75 20.5L4.75 19L3.25 19C3 19 2.75 18.79 2.75 18.5C2.75 18.25 2.95 18 3.25 18L4.75 18L4.75 16.5C4.75 16.25 4.95 16 5.25 16C5.5 16 5.75 16.2 5.75 16.5L5.75 18L7.25 18C7.5 18 7.75 18.2 7.75 18.5C7.75 18.79 7.54 19 7.25 19Z" fill="#0DB89A" fill-opacity="1.000000" fill-rule="nonzero"/>
+                    </svg>                    
+                    <p>Add Money</p>
+                </div></button>
+
+                <button id="cash-out">
+                    <div class="border-2 border-gray-200 p-3 rounded-lg shadow-md flex flex-col justify-center items-center space-y-2">
+                        <svg width="24.000000" height="24.000000" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                            <desc>
+                                    Created with Pixso.
+                            </desc>
+                            <defs>
+                                <clipPath id="clip11_2736">
+                                    <rect id="send 1" rx="0.000000" width="23.000000" height="23.000000" transform="translate(0.500000 0.500000)" fill="white" fill-opacity="0"/>
+                                </clipPath>
+                            </defs>
+                            <rect id="send 1" rx="0.000000" width="23.000000" height="23.000000" transform="translate(0.500000 0.500000)" fill="#FFFFFF" fill-opacity="0"/>
+                            <g clip-path="url(#clip11_2736)">
+                                <path id="Vector" d="M12.63 16.46L7.18 21.95C7.08 21.75 7.2 21.5 7.18 21.26L9.1 15.8C11.5 15.8 12.25 15.34 12.63 16.46Z" fill="#46A350" fill-opacity="1.000000" fill-rule="evenodd"/>
+                                <path id="Vector" d="M21.81 7.01C22.27 6.22 21.5 5.28 20.64 5.57L3.07 11.26C2.23 11.53 2.13 12.69 2.92 13.1L13.99 18.82C14.47 19.07 15.06 18.89 15.32 18.43L21.81 7.01Z" fill="#099718" fill-opacity="1.000000" fill-rule="nonzero"/>
+                                <path id="Vector" d="M13.99 12.03C14.3 11.58 13.82 10.96 13.3 11.2L6.81 14.16C6.46 14.33 6.23 14.68 6.23 15.07L6.9 21.79C6.93 22 7.22 22.03 7.29 21.83L9.01 16.83C9.13 16.48 9.34 16.17 9.62 15.94C10.73 15.01 13.6 12.58 13.99 12.03Z" fill="#005513" fill-opacity="1.000000" fill-rule="nonzero"/>
+                                <path id="Vector" d="M6.2 7.8C6.2 11 8.79 13.6 12 13.6C15.2 13.6 17.79 11 17.79 7.8C17.79 4.59 15.2 2 12 2C8.79 2 6.2 4.59 6.2 7.8Z" fill="#FFBA33" fill-opacity="1.000000" fill-rule="nonzero"/>
+                                <path id="Vector" d="M12.4 5C12.4 4.77 12.22 4.6 12 4.6C11.77 4.6 11.6 4.77 11.6 5L11.6 5.4L10.82 5.4C10.37 5.4 10 5.57 9.75 5.86C9.51 6.14 9.39 6.5 9.39 6.85C9.39 7.19 9.51 7.55 9.75 7.83C10 8.12 10.37 8.3 10.82 8.3L11.6 8.3L11.6 9.6L10.09 9.6C9.87 9.6 9.69 9.77 9.69 10C9.69 10.22 9.87 10.4 10.09 10.4L11.6 10.4L11.6 10.8C11.6 11.02 11.77 11.2 12 11.2C12.22 11.2 12.4 11.02 12.4 10.8L12.4 10.4L13.17 10.4C13.62 10.4 13.99 10.22 14.24 9.93C14.48 9.65 14.6 9.29 14.6 8.95C14.6 8.6 14.48 8.24 14.24 7.96C13.99 7.67 13.62 7.5 13.17 7.5L12.4 7.5L12.4 6.2L13.76 6.2C13.98 6.2 14.16 6.02 14.16 5.8C14.16 5.57 13.98 5.4 13.76 5.4L12.4 5.4L12.4 5ZM11.6 6.2L10.82 6.2C10.59 6.2 10.45 6.28 10.35 6.39C10.25 6.5 10.2 6.67 10.2 6.85C10.2 7.03 10.25 7.19 10.35 7.3C10.45 7.41 10.59 7.5 10.82 7.5L11.6 7.5L11.6 6.2ZM12.4 8.3L12.4 9.6L13.17 9.6C13.4 9.6 13.54 9.51 13.64 9.4C13.74 9.29 13.8 9.12 13.8 8.95C13.8 8.77 13.74 8.6 13.64 8.49C13.54 8.38 13.4 8.3 13.17 8.3L12.4 8.3Z" fill="#FFFFFF" fill-opacity="1.000000" fill-rule="evenodd"/>
+                            </g>
+                        </svg>                    
+                        <p>Cashout</p>
+                    </div>
+                </button>
+
+                <button>
+                    <div class="border-2 border-gray-200 p-3 rounded-lg shadow-md flex flex-col justify-center items-center space-y-2">
+                        <svg width="24.000000" height="24.000000" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                            <desc>
+                                    Created with Pixso.
+                            </desc>
+                            <defs>
+                                <clipPath id="clip11_2745">
+                                    <rect id="money 1" rx="0.000000" width="23.000000" height="23.000000" transform="translate(0.500000 0.500000)" fill="white" fill-opacity="0"/>
+                                </clipPath>
+                            </defs>
+                            <rect id="money 1" rx="0.000000" width="23.000000" height="23.000000" transform="translate(0.500000 0.500000)" fill="#FFFFFF" fill-opacity="0"/>
+                            <g clip-path="url(#clip11_2745)">
+                                <path id="Vector" d="M24 19.23L16.4 14.45L16.4 16.52L12 16.52L11.49 19.04L12 21.94L16.4 21.94L16.4 24.02L24 19.23Z" fill="#0BD5DD" fill-opacity="1.000000" fill-rule="nonzero"/>
+                                <path id="Vector" d="M10.37 16.52L5.83 12.11L5.83 17.23C5.83 19.83 7.95 21.94 10.55 21.94L12 21.94L12 16.52L10.37 16.52Z" fill="#00E5EE" fill-opacity="1.000000" fill-rule="nonzero"/>
+                                <path id="Vector" d="M13.44 2.12L12 2.12L10.99 4.52L12 7.54L13.62 7.54L18.16 11.95L18.16 6.83C18.16 4.23 16.04 2.12 13.44 2.12Z" fill="#0DD141" fill-opacity="1.000000" fill-rule="nonzero"/>
+                                <path id="Vector" d="M7.59 2.12L7.59 0.04L0 4.83L7.59 9.61L7.59 7.54L12 7.54L12 2.12L7.59 2.12Z" fill="#52E161" fill-opacity="1.000000" fill-rule="nonzero"/>
+                                <path id="Vector" d="M12 5.88L11.49 12.18L12 18.18C15.39 18.18 18.15 15.43 18.15 12.03C18.15 8.63 15.39 5.88 12 5.88Z" fill="#FC7419" fill-opacity="1.000000" fill-rule="nonzero"/>
+                                <path id="Vector" d="M5.84 12.03C5.84 15.43 8.6 18.18 12 18.18L12 5.88C8.6 5.88 5.84 8.63 5.84 12.03Z" fill="#FDA102" fill-opacity="1.000000" fill-rule="nonzero"/>
+                                <path id="Vector" d="M12 5.17L11.49 5.67L12 6.58C15 6.58 17.45 9.02 17.45 12.03C17.45 15.04 15 17.48 12 17.48L11.49 18.18L12 18.89C15.78 18.89 18.85 15.81 18.85 12.03C18.85 8.25 15.78 5.17 12 5.17Z" fill="#FDAE02" fill-opacity="1.000000" fill-rule="nonzero"/>
+                                <path id="Vector" d="M6.54 12.03C6.54 9.02 8.99 6.58 12 6.58L12 5.17C8.21 5.17 5.14 8.25 5.14 12.03C5.14 15.81 8.21 18.89 12 18.89L12 17.48C8.99 17.48 6.54 15.04 6.54 12.03Z" fill="#FDCB02" fill-opacity="1.000000" fill-rule="nonzero"/>
+                                <path id="Vector" d="M12.15 10.6C12.61 10.6 13.11 10.73 13.65 11L14.19 9.68C13.75 9.44 13.2 9.29 12.63 9.24L12.63 8.41L12 8.41L11.49 10.18L12 10.6C12.04 10.6 12.09 10.6 12.15 10.6Z" fill="#FDD535" fill-opacity="1.000000" fill-rule="nonzero"/>
+                                <path id="Vector" d="M12 11.28L11.49 12.18L12 12.79C12.37 12.87 12.63 12.97 12.63 13.17C12.63 13.35 12.46 13.45 12 13.46L11.49 14.18L12 15.65L12.63 15.65L12.63 14.79C13.82 14.58 14.42 13.86 14.42 13.03C14.42 11.59 12.86 11.48 12 11.28Z" fill="#FDD535" fill-opacity="1.000000" fill-rule="nonzero"/>
+                                <path id="Vector" d="M11.93 13.46C11.34 13.46 10.66 13.27 10.15 12.97L9.57 14.29C10.03 14.58 10.78 14.78 11.54 14.83L11.54 15.65L12 15.65L12 13.46C11.97 13.46 11.95 13.46 11.93 13.46Z" fill="#FEEA9A" fill-opacity="1.000000" fill-rule="nonzero"/>
+                                <path id="Vector" d="M11.54 9.25C10.28 9.43 9.65 10.16 9.65 11.03C9.65 12.44 11.12 12.59 12 12.79L12 11.28C11.67 11.2 11.44 11.11 11.44 10.94C11.44 10.77 11.58 10.63 12 10.6L12 8.41L11.54 8.41L11.54 9.25Z" fill="#FEEA9A" fill-opacity="1.000000" fill-rule="nonzero"/>
+                            </g>
+                        </svg>                    
+                        <p>T Money</p>
+                    </div>
+                </button>
+
+                <button>
+                    <div class="border-2 border-gray-200 p-3 rounded-lg shadow-md flex flex-col justify-center items-center space-y-2">
+                        <svg width="20.651611" height="18.311279" viewBox="0 0 20.6516 18.3113" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                            <desc>
+                                    Created with Pixso.
+                            </desc>
+                            <defs/>
+                            <path id="Vector" d="M20.13 18.31L5.12 18.31C4.84 18.31 4.61 18.08 4.61 17.79L4.61 10.71C4.61 10.43 4.84 10.2 5.12 10.2L20.13 10.2C20.42 10.2 20.65 10.43 20.65 10.71L20.65 17.79C20.65 18.08 20.42 18.31 20.13 18.31Z" fill="#5A7A39" fill-opacity="1.000000" fill-rule="nonzero"/>
+                            <path id="Vector" d="M19.28 17.45L4.26 17.45C3.98 17.45 3.75 17.22 3.75 16.94L3.75 9.85C3.75 9.57 3.98 9.34 4.26 9.34L19.28 9.34C19.56 9.34 19.79 9.57 19.79 9.85L19.79 16.94C19.79 17.22 19.56 17.45 19.28 17.45Z" fill="#648940" fill-opacity="1.000000" fill-rule="nonzero"/>
+                            <path id="Vector" d="M18.42 16.59L3.41 16.59C3.12 16.59 2.89 16.36 2.89 16.08L2.89 9C2.89 8.71 3.12 8.48 3.41 8.48L18.42 8.48C18.7 8.48 18.93 8.71 18.93 9L18.93 16.08C18.93 16.36 18.7 16.59 18.42 16.59Z" fill="#76A34F" fill-opacity="1.000000" fill-rule="nonzero"/>
+                            <path id="Vector" d="M18.23 13.84L18.23 11.24C18.23 11.15 18.16 11.08 18.07 11.07C17.17 10.99 16.46 10.26 16.39 9.34C16.38 9.25 16.31 9.18 16.22 9.18L5.61 9.18C5.52 9.18 5.45 9.25 5.44 9.34C5.37 10.26 4.65 10.99 3.75 11.07C3.67 11.08 3.6 11.15 3.6 11.24L3.6 13.84C3.6 13.93 3.67 14 3.75 14.01C4.65 14.08 5.37 14.82 5.44 15.74C5.45 15.83 5.52 15.89 5.61 15.89L16.22 15.89C16.31 15.89 16.38 15.83 16.39 15.74C16.46 14.82 17.18 14.08 18.07 14.01C18.16 14 18.23 13.93 18.23 13.84Z" fill="#91B56B" fill-opacity="1.000000" fill-rule="nonzero"/>
+                            <path id="Vector" d="M13.56 12.54C13.56 14 12.37 15.18 10.91 15.18C9.45 15.18 8.27 14 8.27 12.54C8.27 11.08 9.45 9.89 10.91 9.89C12.37 9.89 13.56 11.08 13.56 12.54Z" fill="#FFFFFF" fill-opacity="1.000000" fill-rule="evenodd"/>
+                            <path id="Vector" d="M11.18 14.17L10.65 14.17C10.19 14.17 9.81 13.79 9.81 13.32C9.81 13.22 9.89 13.14 10 13.14C10.1 13.14 10.18 13.22 10.18 13.32C10.18 13.58 10.39 13.79 10.65 13.79L11.18 13.79C11.43 13.79 11.64 13.58 11.64 13.32L11.64 13.06C11.64 12.8 11.43 12.59 11.18 12.59L10.65 12.59C10.19 12.59 9.81 12.22 9.81 11.75C9.81 11.29 10.19 10.91 10.65 10.91L11.18 10.91C11.64 10.91 12.02 11.29 12.02 11.75C12.02 11.86 11.93 11.94 11.83 11.94C11.73 11.94 11.64 11.86 11.64 11.75C11.64 11.5 11.43 11.29 11.18 11.29L10.65 11.29C10.39 11.29 10.18 11.5 10.18 11.75C10.18 12.01 10.39 12.22 10.65 12.22L11.18 12.22C11.64 12.22 12.02 12.6 12.02 13.06L12.02 13.32C12.02 13.79 11.64 14.17 11.18 14.17Z" fill="#648940" fill-opacity="1.000000" fill-rule="nonzero"/>
+                            <path id="Vector" d="M10.91 14.43C10.81 14.43 10.73 14.34 10.73 14.24L10.73 10.84C10.73 10.73 10.81 10.65 10.91 10.65C11.02 10.65 11.1 10.73 11.1 10.84L11.1 14.24C11.1 14.34 11.02 14.43 10.91 14.43Z" fill="#648940" fill-opacity="1.000000" fill-rule="nonzero"/>
+                            <path id="Vector" d="M9.2 6.67C9.2 9.22 7.14 11.28 4.6 11.28C2.06 11.28 0 9.22 0 6.67C0 4.13 2.06 2.07 4.6 2.07C7.14 2.07 9.2 4.13 9.2 6.67Z" fill="#FFA91A" fill-opacity="1.000000" fill-rule="evenodd"/>
+                            <path id="Vector" d="M0.68 6.86C0.58 6.86 0.49 6.78 0.49 6.67C0.49 6.57 0.58 6.49 0.68 6.49C0.78 6.49 0.87 6.57 0.87 6.67C0.87 6.78 0.78 6.86 0.68 6.86ZM0.75 6.12C0.74 6.12 0.73 6.11 0.72 6.11C0.67 6.1 0.62 6.07 0.6 6.03C0.57 5.99 0.56 5.94 0.57 5.89C0.76 4.92 1.29 4.05 2.08 3.43C2.28 3.27 2.51 3.13 2.74 3.01C2.83 2.97 2.94 3 2.99 3.09C3.01 3.14 3.02 3.19 3 3.24C2.99 3.28 2.95 3.32 2.91 3.35C2.7 3.45 2.49 3.58 2.31 3.73C1.59 4.29 1.11 5.08 0.94 5.96L0.94 5.96C0.92 6.05 0.84 6.12 0.75 6.12Z" fill="#FFC91D" fill-opacity="1.000000" fill-rule="nonzero"/>
+                            <path id="Vector" d="M7.23 2.9C7.76 3.64 8.06 4.55 8.06 5.53C8.06 8.07 6 10.13 3.46 10.13C2.48 10.13 1.57 9.83 0.82 9.31C1.66 10.5 3.04 11.28 4.6 11.28C7.14 11.28 9.2 9.22 9.2 6.67C9.2 5.11 8.42 3.73 7.23 2.9Z" fill="#F79219" fill-opacity="1.000000" fill-rule="nonzero"/>
+                            <path id="Vector" d="M7.56 3.14C8.23 3.94 8.63 4.98 8.63 6.1C8.63 8.64 6.57 10.71 4.03 10.71C2.9 10.71 1.87 10.3 1.07 9.63C1.92 10.64 3.18 11.28 4.6 11.28C7.14 11.28 9.2 9.22 9.2 6.67C9.2 5.26 8.56 3.99 7.56 3.14Z" fill="#EF7816" fill-opacity="1.000000" fill-rule="nonzero"/>
+                            <path id="Vector" d="M5.02 9.27L4.18 9.27C3.5 9.27 2.95 8.72 2.95 8.04C2.95 7.94 3.03 7.85 3.13 7.85C3.24 7.85 3.32 7.94 3.32 8.04C3.32 8.51 3.71 8.9 4.18 8.9L5.02 8.9C5.49 8.9 5.88 8.51 5.88 8.04L5.88 7.62C5.88 7.15 5.49 6.76 5.02 6.76L4.18 6.76C3.5 6.76 2.95 6.21 2.95 5.52C2.95 4.84 3.5 4.29 4.18 4.29L5.02 4.29C5.7 4.29 6.25 4.84 6.25 5.52C6.25 5.63 6.17 5.71 6.07 5.71C5.96 5.71 5.88 5.63 5.88 5.52C5.88 5.05 5.49 4.66 5.02 4.66L4.18 4.66C3.71 4.66 3.32 5.05 3.32 5.52C3.32 6 3.71 6.38 4.18 6.38L5.02 6.38C5.7 6.38 6.25 6.94 6.25 7.62L6.25 8.04C6.25 8.72 5.7 9.27 5.02 9.27Z" fill="#FFFFFF" fill-opacity="1.000000" fill-rule="nonzero"/>
+                            <path id="Vector" d="M4.6 9.69C4.5 9.69 4.41 9.61 4.41 9.51L4.41 4.06C4.41 3.95 4.5 3.87 4.6 3.87C4.7 3.87 4.79 3.95 4.79 4.06L4.79 9.51C4.79 9.61 4.7 9.69 4.6 9.69Z" fill="#FFFFFF" fill-opacity="1.000000" fill-rule="nonzero"/>
+                            <path id="Vector" d="M17.96 3.61C17.96 5.61 16.34 7.22 14.34 7.22C12.35 7.22 10.73 5.61 10.73 3.61C10.73 1.61 12.35 0 14.34 0C16.34 0 17.96 1.61 17.96 3.61Z" fill="#76A34F" fill-opacity="1.000000" fill-rule="evenodd"/>
+                            <path id="Vector" d="M16.9 1.05C16.79 0.94 16.67 0.84 16.55 0.75C17.65 2.17 17.55 4.22 16.25 5.52C14.95 6.82 12.9 6.92 11.48 5.82C11.58 5.94 11.68 6.06 11.79 6.17C13.2 7.58 15.49 7.58 16.9 6.17C18.31 4.75 18.31 2.47 16.9 1.05Z" fill="#648940" fill-opacity="1.000000" fill-rule="nonzero"/>
+                            <path id="Vector" d="M13.95 5.53C13.79 5.53 13.63 5.46 13.5 5.34L12.26 4.09C12.01 3.84 12.01 3.44 12.26 3.2C12.5 2.95 12.9 2.95 13.15 3.2L13.95 4L15.54 2.41C15.79 2.16 16.19 2.16 16.43 2.41C16.68 2.66 16.68 3.06 16.43 3.3L14.4 5.34C14.28 5.46 14.11 5.53 13.95 5.53Z" fill="#FFC91D" fill-opacity="1.000000" fill-rule="nonzero"/>
+                            <path id="Vector" d="M13.69 3.74L13.15 3.2L13.15 3.2L13.69 3.74Z" fill="#377DE2" fill-opacity="1.000000" fill-rule="nonzero"/>
+                            <path id="Vector" d="M16.43 2.41C16.39 2.36 16.34 2.33 16.28 2.3C16.41 2.54 16.38 2.84 16.17 3.05L14.14 5.08C14.02 5.2 13.85 5.27 13.69 5.27C13.53 5.27 13.37 5.2 13.24 5.08L13.5 5.34C13.63 5.46 13.79 5.53 13.95 5.53C14.11 5.53 14.28 5.46 14.4 5.34L16.43 3.31C16.68 3.06 16.68 2.66 16.43 2.41Z" fill="#FFA91A" fill-opacity="1.000000" fill-rule="nonzero"/>
+                        </svg>                    
+                        <p>Get Bonus</p>
+                    </div>
+                </button>
+
+                <button>
+                    <div class="border-2 border-gray-200 p-3 rounded-lg shadow-md flex flex-col justify-center items-center space-y-2">
+                        <svg width="20.867294" height="17.940674" viewBox="0 0 20.8673 17.9407" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                            <desc>
+                                    Created with Pixso.
+                            </desc>
+                            <defs>
+                                <linearGradient x1="11.402009" y1="0.981537" x2="11.054730" y2="3.845946" id="paint_linear_11_2815_0" gradientUnits="userSpaceOnUse">
+                                    <stop stop-color="#FFB92D"/>
+                                    <stop offset="1.000000" stop-color="#F59500"/>
+                                </linearGradient>
+                            </defs>
+                            <path id="Vector" d="M19.17 17.94L1.68 17.94C0.75 17.94 0 17.18 0 16.25L0 1.68C0 0.75 0.75 0 1.68 0L19.17 0C20.11 0 20.86 0.75 20.86 1.68L20.86 16.25C20.86 17.18 20.11 17.94 19.17 17.94Z" fill="url(#paint_linear_11_2815_0)" fill-opacity="1.000000" fill-rule="nonzero"/>
+                        </svg>                    
+                        <p>Pay Bill</p>
+                    </div>
+                </button>
+
+                <button>
+                    <div class="border-2 border-gray-200 p-3 rounded-lg shadow-md flex flex-col justify-center items-center space-y-2">
+                        <svg width="23.999977" height="24.000000" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                            <desc>
+                                    Created with Pixso.
+                            </desc>
+                            <defs/>
+                            <path id="Vector" d="M17.05 23.81L21.58 19.61C21.89 19.33 21.89 18.86 21.58 18.58L17.05 14.38C16.59 13.97 15.86 14.29 15.86 14.9L15.86 16.69L9.07 16.69C8.75 16.69 8.49 16.95 8.49 17.27L8.49 20.92C8.49 21.24 8.75 21.5 9.07 21.5L15.86 21.5L15.86 23.29C15.86 23.9 16.59 24.22 17.05 23.81Z" fill="#48ACFF" fill-opacity="1.000000" fill-rule="nonzero"/>
+                            <path id="Vector" d="M21.58 19.61L17.05 23.81C16.59 24.22 15.86 23.9 15.86 23.29L15.86 22.39C18.03 22.05 19.68 20.18 19.68 17.91C19.68 17.48 19.62 17.06 19.51 16.66L21.58 18.58C21.89 18.86 21.89 19.33 21.58 19.61Z" fill="#229BFF" fill-opacity="1.000000" fill-rule="nonzero"/>
+                            <path id="Vector" d="M21.58 19.61L21.33 19.85L8.49 19.85L8.49 17.27C8.49 16.95 8.75 16.69 9.07 16.69L15.86 16.69L15.86 14.9C15.86 14.29 16.59 13.97 17.05 14.38L21.58 18.58C21.89 18.86 21.89 19.33 21.58 19.61Z" fill="#229BFF" fill-opacity="1.000000" fill-rule="nonzero"/>
+                            <path id="Vector" d="M6.94 9.61L2.41 5.41C2.1 5.13 2.1 4.66 2.41 4.38L6.94 0.18C7.4 -0.23 8.13 0.09 8.13 0.7L8.13 2.49L14.92 2.49C15.24 2.49 15.5 2.75 15.5 3.07L15.5 6.72C15.5 7.04 15.24 7.3 14.92 7.3L8.13 7.3L8.13 9.09C8.13 9.7 7.4 10.02 6.94 9.61Z" fill="#FF4881" fill-opacity="1.000000" fill-rule="nonzero"/>
+                            <path id="Vector" d="M15.5 5.05L15.5 3.07C15.5 2.75 15.24 2.49 14.92 2.49L14.52 2.49C14.52 3.43 13.77 4.7 12.13 5.05L15.5 5.05Z" fill="#FE255F" fill-opacity="1.000000" fill-rule="nonzero"/>
+                            <path id="Vector" d="M12.17 2.49L8.08 2.49C7.63 2.49 7.26 2.86 7.26 3.31C7.26 3.77 7.63 4.14 8.08 4.14L12.17 4.14C12.63 4.14 13 3.77 13 3.31C13 2.86 12.63 2.49 12.17 2.49Z" fill="#FC709B" fill-opacity="1.000000" fill-rule="nonzero"/>
+                            <path id="Vector" d="M10.36 2.49L9.53 2.49C9.08 2.49 8.71 2.86 8.71 3.31C8.71 3.77 9.08 4.14 9.53 4.14L10.36 4.14C10.82 4.14 11.19 3.77 11.19 3.31C11.19 2.86 10.82 2.49 10.36 2.49Z" fill="#F7A6C1" fill-opacity="1.000000" fill-rule="nonzero"/>
+                            <path id="Vector" d="M22.59 18.94L1.4 18.94C0.62 18.94 0 18.31 0 17.53L0 6.46C0 5.68 0.62 5.05 1.4 5.05L22.59 5.05C23.37 5.05 24 5.68 24 6.46L24 17.53C24 18.31 23.37 18.94 22.59 18.94Z" fill="#29E088" fill-opacity="1.000000" fill-rule="nonzero"/>
+                            <path id="Vector" d="M24 6.46L24 17.53C24 18.31 23.37 18.94 22.59 18.94L11.13 18.94C16.6 17.95 20.74 13.17 20.74 7.42C20.74 6.61 20.66 5.82 20.5 5.05L22.59 5.05C23.37 5.05 24 5.68 24 6.46Z" fill="#0CC166" fill-opacity="1.000000" fill-rule="nonzero"/>
+                            <path id="Vector" d="M23.99 13.72L23.99 17.53C23.99 18.31 23.37 18.94 22.59 18.94L17.14 18.94C20.17 18.39 22.7 16.41 23.99 13.72Z" fill="#04A550" fill-opacity="1.000000" fill-rule="nonzero"/>
+                            <path id="Vector" d="M22.35 7.16L22.35 16.36C22.35 16.88 21.93 17.3 21.42 17.3L2.1 17.3C1.85 17.3 1.64 17.09 1.64 16.83L1.64 7.63C1.64 7.11 2.06 6.69 2.57 6.69L21.89 6.69C22.14 6.69 22.35 6.9 22.35 7.16Z" fill="#0CC166" fill-opacity="1.000000" fill-rule="nonzero"/>
+                            <path id="Vector" d="M22.35 7.16L22.35 16.36C22.35 16.88 21.93 17.3 21.42 17.3L15.32 17.3C18.58 15.22 20.74 11.58 20.74 7.42C20.74 7.18 20.73 6.93 20.72 6.69L21.89 6.69C22.14 6.69 22.35 6.9 22.35 7.16Z" fill="#04A550" fill-opacity="1.000000" fill-rule="nonzero"/>
+                            <path id="Vector" d="M16.07 12C16.07 14.52 14.25 16.57 12 16.57C9.74 16.57 7.92 14.52 7.92 12C7.92 9.47 9.74 7.42 12 7.42C14.25 7.42 16.07 9.47 16.07 12Z" fill="#04A550" fill-opacity="1.000000" fill-rule="evenodd"/>
+                            <path id="Vector" d="M16.07 12C16.07 14.52 14.25 16.57 12 16.57C10.65 16.57 9.46 15.84 8.72 14.72C9.27 14.96 9.87 15.09 10.5 15.09C12.99 15.09 15 13.07 15 10.59C15 9.74 14.76 8.94 14.35 8.26C15.39 9.09 16.07 10.45 16.07 12Z" fill="#00893E" fill-opacity="1.000000" fill-rule="nonzero"/>
+                        </svg>  
+                        <p>Transactions</p>
+                    </div>
+                </button>
+
+            </div>
+            <!-- features end -->
+
+            <!-- add money feal start-->
+            <div id="add-money-feld" class="card-body hidden">
+                <div class="form-control">
+                    <label class="label">
+                        <span class="label-text font-bold">Amount To Add</span>
+                    </label>
+                    <input id="add-money-input" type="text" placeholder="Add Amount to add"
+                        class="input input-bordered" required />
+                </div>
+                <div class="form-control">
+                    <label class="label">
+                        <span class="label-text font-bold">Pin Number</span>
+                    </label>
+                    <input id="pin-number-input" type="password" placeholder="Enter 4 digit pin number"
+                        class="input input-bordered" required />
+                </div>
+                <div class="form-control mt-6">
+                    <button id="add-money-btn" class="btn bg-[#0874F2] text-white rounded-3xl">Add Money</button>
+                </div>
+            </div>
+            <!-- add money feld end -->
+
+            <!-- cash out feld start -->
+            <div id="cash-out-feld" class="card-body hidden">
+                <div class="form-control">
+                    <label class="label">
+                        <span class="label-text font-bold">Amount To Withdraw</span>
+                    </label>
+                    <input id="cash-out-input" type="text" placeholder="Enter amount to cash out"
+                        class="input input-bordered" required />
+                </div>
+                <div class="form-control">
+                    <label class="label">
+                        <span class="label-text font-bold">Pin Number</span>
+                    </label>
+                    <input id="pin-number-input2" type="password" placeholder="Enter 4 digit pin number"
+                        class="input input-bordered" required />
+                </div>
+                <div class="form-control mt-6">
+                    <button id="cash-out-btn" class="btn bg-[#0874F2] text-white rounded-3xl">Withdraw Money</button>
+                </div>
+            </div>
+            <!-- cash out feld end -->
+        </div>
+    </div>
+
+    <!-- script -->
+    <script src="./js/payooAddMoney.js"></script>
 </body>
+
 </html>
